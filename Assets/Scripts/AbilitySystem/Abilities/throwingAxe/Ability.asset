@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566defbe6ef16d64c80474ca1f95563b, type: 3}
+  m_Name: Ability
+  m_EditorClassIdentifier: 
+  abilityName: 
+  abilityDescription: 
+  abilityIcon: {fileID: 0}
+  activateSound: {fileID: 0}
+  activateVolume: 1
+  activateCooldownSound: {fileID: 0}
+  activateCooldownVolume: 1
+  baseCooldown: 0
+  windupTime: 0
+  channelTime: 0
+  effects:
+  - {fileID: 11400000, guid: 9deacbd302070244bb7f2a474f505299, type: 2}
+  scriptCooldown: 1

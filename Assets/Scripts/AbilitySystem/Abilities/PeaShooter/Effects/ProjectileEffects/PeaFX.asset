@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7726bbe3ffda48d4f9fe863c59f4745d, type: 3}
+  m_Name: PeaFX
+  m_EditorClassIdentifier: 
+  toInitializeEffects:
+  - {fileID: 100000, guid: c2204c8be58cfc341a8cc5f6d3d0897e, type: 2}
+  toFollowEffects:
+  - {fileID: 100002, guid: fae5d333f43a55744ab0c44fecefdcae, type: 2}

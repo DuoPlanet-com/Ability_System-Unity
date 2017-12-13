@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7cdcbc554f2034b9a123049d7fa463, type: 3}
+  m_Name: Effect
+  m_EditorClassIdentifier: 
+  effectName: 
+  effectDescription: 
+  maxStacks: 1
+  stackTimer: 1
+  stackCommitment: 2
+  effectScripts:
+  - {fileID: 11400000, guid: ffdf673d27a42f04b83925d20ddb8db6, type: 2}
+  - {fileID: 11400000, guid: 4fc781dfa9eebd941b7f91fe4692ed1d, type: 2}
