@@ -14,6 +14,6 @@ MonoBehaviour:
   collisionChecks: []
   isTriggerEffect: 0
   toSpawn:
-  - {fileID: 100002, guid: 180149b1a35449044a27b451e816d2de, type: 2}
+  - {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
   offset: {x: 0, y: 0, z: 0}
   orientation: 1

@@ -8,10 +8,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17ca6fca757a83c4e990dcf4e8267a3a, type: 3}
-  m_Name: ToOther
+  m_Script: {fileID: 11500000, guid: 5b448de90e5728e4696720120fb7122c, type: 3}
+  m_Name: BombAOE
   m_EditorClassIdentifier: 
-  oneTime: 1
-  lifeTime: 0
-  doneTime: 0
-  amount: 5
+  collisionChecks: []
+  isTriggerEffect: 0
+  lifeTime: 3
+  oneTime: 0
+  radius: 50
+  offset: {x: 0, y: 0, z: 0}
+  effectsToPlay: []

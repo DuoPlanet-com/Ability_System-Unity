@@ -8,19 +8,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc54b45f841456a45b0bbb411a81e801, type: 3}
-  m_Name: PeaTrajectory
+  m_Script: {fileID: 11500000, guid: fbdb9d56f0b42cd4f88efe4d0ecff978, type: 3}
+  m_Name: ModularPea
   m_EditorClassIdentifier: 
-  effectScriptName: PeaScript
+  effectScriptName: 
   origin: 0
-  originOffset: {x: 0, y: -0.7, z: 3}
+  originOffset: {x: 0, y: 0, z: 0}
   offsetSpace: 1
   direction: {x: 0, y: 0, z: 1}
   directionSpace: 1
-  force: 1200
-  projectile: {fileID: 11400000, guid: f17dbe7b4f8db8a418e7f2e00fab880e, type: 2}
-  projectileEffects:
-  - {fileID: 11400000, guid: 8f3a8127579aa594e968857d06d20048, type: 2}
   impactEffects:
   - {fileID: 11400000, guid: 422532bf0bc56ab4291dd8fb2349c368, type: 2}
   - {fileID: 11400000, guid: 522315f801f40024ebbd3cc0dc80bd6d, type: 2}
+  force: 1500
+  projectile: {fileID: 11400000, guid: f17dbe7b4f8db8a418e7f2e00fab880e, type: 2}
+  projectileEffects:
+  - {fileID: 11400000, guid: 8f3a8127579aa594e968857d06d20048, type: 2}

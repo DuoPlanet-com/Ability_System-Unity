@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 633f232377ce1cd40b8b04920435ace7, type: 3}
-  m_Name: New Give Object Affect
+  m_Name: GiveAOEDamage
   m_EditorClassIdentifier: 
+  collisionChecks: []
   isTriggerEffect: 0
-  affectsToSender:
-  - {fileID: 11400000, guid: 444738528aaefff41b5cc879ee357512, type: 2}
+  affectsToSender: []
   affectsToHit:
-  - {fileID: 11400000, guid: 12a847ec622cec546af8ee2d3db03602, type: 2}
+  - {fileID: 11400000, guid: 5d8d68343f0d45f489ae2ff4924eed27, type: 2}

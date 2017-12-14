@@ -14,21 +14,44 @@ namespace AbilitySystem.TrajectorySystem.MonoHelper
 
         Rigidbody rb;
 
-        ImpactEffect.AOEImpact AOE;
+        Projectiles.AOEEffect[] effectsToPlay;
+
+        ImpactEffects.AOEImpact AOE;
+
+        MetaData.PlayerMetaData sender;
+
+        float timer;
 
         // Use this for initialization
         void Start()
         {
             GrabComponents();
+            rb.isKinematic = true;
             sc.radius = radius;
             sc.isTrigger = true;
 
+            timer = AOE.lifeTime;
+
         }
 
-        public void SetSettings(float AOERadius, ImpactEffect.AOEImpact impactEffect)
+        private void Update()
+        {
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+            } else
+            {
+                timer = 0;
+                Destroy(gameObject);
+            }
+        }
+
+        public void SetSettings(ImpactEffects.AOEImpact impactEffect, MetaData.PlayerMetaData senderParam)
         {
             AOE = impactEffect;
-            radius = AOERadius;
+            radius = AOE.radius;
+            sender = senderParam;
+            effectsToPlay = AOE.effectsToPlay;
         }
 
         void GrabComponents()
@@ -54,7 +77,21 @@ namespace AbilitySystem.TrajectorySystem.MonoHelper
 
         private void OnTriggerEnter(Collider other)
         {
+            foreach (Projectiles.AOEEffect effect in effectsToPlay)
+            {
+                effect.OnCollision(other , sender , transform.position, AOE);
+            }
+            if (AOE.oneTime) {
+                Destroy(gameObject);
+            }
+        }
 
+        private void OnTriggerStay(Collider other)
+        {
+            foreach (Projectiles.AOEEffect effect in effectsToPlay)
+            {
+                effect.OnCollision(other, sender, transform.position, AOE);
+            }
         }
 
     }

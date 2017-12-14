@@ -16,4 +16,4 @@ MonoBehaviour:
   hideOnImpact: 1
   freezeOnImpact: 1
   disableColliders: 1
-  destroyAfter: 3
+  destroyAfter: 1

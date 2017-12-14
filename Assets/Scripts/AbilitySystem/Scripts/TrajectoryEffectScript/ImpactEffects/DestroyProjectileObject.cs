@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using AbilitySystem.MetaData;
 using UnityEngine;
 
-namespace AbilitySystem.TrajectorySystem.ImpactEffect
+namespace AbilitySystem.TrajectorySystem.ImpactEffects
 {
     [CreateAssetMenu(menuName = "Abilities/Trajectory System/Impact Effects/Destroy Projectile Object")]
     public class DestroyProjectileObject : Projectiles.ImpactEffect
