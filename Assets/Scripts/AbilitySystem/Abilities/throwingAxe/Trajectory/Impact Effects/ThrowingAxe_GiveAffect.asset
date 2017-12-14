@@ -16,4 +16,4 @@ MonoBehaviour:
   isTriggerEffect: 0
   affectsToSender: []
   affectsToHit:
-  - {fileID: 11400000, guid: 83ecfe1a7064256498cf1d09d30af918, type: 2}
+  - {fileID: 11400000, guid: b68738cbda99cd04a91e0980e8e41cd2, type: 2}

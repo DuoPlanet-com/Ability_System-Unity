@@ -101,7 +101,7 @@ namespace AbilitySystem.MetaData {
                 return true;
             } else
             {
-                if (affect.reapplicible)
+                if (affect.reappliable)
                 {
                     affect.LifeLeft(affect.lifeTime);
                     affects.Remove(affect);
