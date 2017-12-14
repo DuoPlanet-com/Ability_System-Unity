@@ -6,8 +6,8 @@ using UnityEngine;
 
 namespace AbilitySystem.TrajectorySystem
 {
-    [CreateAssetMenu(menuName = "Abilities/Trajectory System/New trajectory")]
-    public sealed class TrajectoryEffectScript : EffectScript
+    [CreateAssetMenu(menuName = "Abilities/Trajectory System/New Projectile Ability")]
+    public sealed class ModularProjectileAbility : ModularAbility
     {
 
         /// <summary>
@@ -15,39 +15,21 @@ namespace AbilitySystem.TrajectorySystem
         /// </summary>
 
 
-        [Header("Trajectory Settings")]
-
-        [Tooltip("Where should the object be spawned")]
-        public TrajectoryOrigins origin = TrajectoryOrigins.CAMERA;
-
-
-        [Header("Origin")]
-
-        [Tooltip("An offset which is applied to the origin")]
-        public Vector3 originOffset = Vector3.zero;
-
-        [Tooltip("In what space should the offset be applied?")]
-        public Space offsetSpace = Space.Self;
+        [Header("Projectile Settings")]
 
 
         [Header("Direction")]
 
-        [Tooltip("The direction to fire in")]
-        public Vector3 direction = Vector3.forward;
+        [Tooltip("How much force should be applied\n\n" +
 
-        [Tooltip("In what space should this direction be?")]
-        public Space directionSpace = Space.Self;
-
-        [Tooltip("How much force should be applied\n\n"+
-            
             "Only a useful option if using AddForce")]
         public float force = 500;
 
 
         [Header("Projectile")]
 
-        [Tooltip("The projectile asset, which will be fired\n\n"+
-            
+        [Tooltip("The projectile asset, which will be fired\n\n" +
+
             "Only valid if not using raycast as TrajectoryType")]
         public Projectiles.Projectile projectile;
 
@@ -56,23 +38,14 @@ namespace AbilitySystem.TrajectorySystem
         [Tooltip("The ProjectileEffect asset which dictates any effects that should be played on the projectile and upon fireing")]
         public Projectiles.ProjectileEffect[] projectileEffects;
 
-        public Projectiles.ImpactEffect[] impactEffects;
 
-        public enum TrajectoryTypes
-        {
-            RAYCAST, ADDFORCE
-        }
-
-        public enum TrajectoryOrigins
-        {
-            CAMERA, SENDER_ORIGIN
-        }
 
         public override void OnUpdate(float input, ObjectMetaData reciever)
         {
             base.OnUpdate(input, reciever);
 
-            if (projectile.instantiatedObject != null) { 
+            if (projectile.instantiatedObject != null)
+            {
                 foreach (Projectiles.ProjectileEffect PE in projectileEffects)
                 {
 
@@ -127,37 +100,5 @@ namespace AbilitySystem.TrajectorySystem
                 PE.OnInit();
             }
         }
-
-        Vector3 GetProjectileOrigin()
-        {
-            Vector3 spawnPoint = Vector3.zero;
-            if (origin == TrajectoryOrigins.CAMERA)
-                if (offsetSpace == Space.Self)
-                {
-                    spawnPoint = Camera.main.transform.position;
-                    spawnPoint += Camera.main.transform.forward.normalized * originOffset.z;
-                    spawnPoint += Camera.main.transform.up.normalized * originOffset.y;
-                    spawnPoint += Camera.main.transform.right.normalized * originOffset.x;
-                }
-                else
-                {
-                    spawnPoint = Camera.main.transform.position + originOffset;
-                }
-            else if (origin == TrajectoryOrigins.SENDER_ORIGIN)
-                if (offsetSpace == Space.Self)
-                {
-                    spawnPoint = sender.transform.position;
-                    spawnPoint += sender.transform.forward.normalized * originOffset.z;
-                    spawnPoint += sender.transform.up.normalized * originOffset.y;
-                    spawnPoint += sender.transform.right.normalized * originOffset.x;
-                }
-                else
-                {
-                    spawnPoint = sender.transform.position + originOffset;
-                }
-            
-            return spawnPoint;
-        }
-
     }
 }

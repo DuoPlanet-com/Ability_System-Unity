@@ -15,8 +15,6 @@ namespace AbilitySystem.TrajectorySystem.Projectiles
         [Tooltip("The CollisionCheck asset which dictates what the projectile may and may not hit.")]
         public CollisionCheck[] collisionChecks;
 
-        public bool isTriggerEffect = false;
-
         protected Projectile projectile;
 
         public abstract void OnCollision(Collision collision, MetaData.PlayerMetaData sender);

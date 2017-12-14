@@ -17,4 +17,4 @@ MonoBehaviour:
   stackTimer: 2
   stackCommitment: 2
   effectScripts:
-  - {fileID: 11400000, guid: 0eab60660c23e624caf209b72d454464, type: 2}
+  - {fileID: 11400000, guid: fb8a5a4d2880dac43879b8ef8b4b1723, type: 2}
