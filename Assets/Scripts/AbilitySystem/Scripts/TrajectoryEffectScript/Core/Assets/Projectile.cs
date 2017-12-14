@@ -68,13 +68,11 @@ namespace AbilitySystem.TrajectorySystem.Projectiles
 
         public virtual void OnTriggerStay(Collider other)
         {
-            Debug.Log("trigstay");
 
         }
 
         public virtual void OnTriggerExit(Collider other)
         {
-            Debug.Log("trigexit");
 
         }
 

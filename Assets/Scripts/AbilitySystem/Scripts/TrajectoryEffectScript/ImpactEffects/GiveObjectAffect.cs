@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AbilitySystem.TrajectorySystem.ImpactEffect
+namespace AbilitySystem.TrajectorySystem.ImpactEffects
 {
     [CreateAssetMenu(menuName = "Abilities/Trajectory System/Impact Effects/Give ObjectAffect")]
     public class GiveObjectAffect : Projectiles.ImpactEffect
@@ -19,44 +19,36 @@ namespace AbilitySystem.TrajectorySystem.ImpactEffect
         public override void OnCollision(Collision collision, MetaData.PlayerMetaData sender)
         {
 
-            if (!isTriggerEffect)
+          
+            foreach (ObjectAffect item in affectsToSender)
             {
-                foreach (ObjectAffect item in affectsToSender)
-                {
-                    sender.AddAffect(item);
+                sender.AddAffect(item);
 
-                }
+            }
 
-                if (collision.gameObject.GetComponent<MetaData.ObjectMetaData>() != null)
+            if (collision.gameObject.GetComponent<MetaData.ObjectMetaData>() != null)
+            {
+                foreach (ObjectAffect item in affectsToHit)
                 {
-                    foreach (ObjectAffect item in affectsToHit)
-                    {
-                        collision.gameObject.GetComponent<MetaData.ObjectMetaData>().AddAffect(item);
-                    }
+                    collision.gameObject.GetComponent<MetaData.ObjectMetaData>().AddAffect(item);
                 }
             }
-            else
-            {
-                Debug.Log("<color=olive>Warning ! OnCollision, but isTrigger variable is true</color>\nYou should either set the collider to isTrigger, or make sure the ImpactEffect is not trigger");
-            }
+           
         }
 
         public override void OnCollision(Collider other, MetaData.PlayerMetaData sender)
         {
-            if (isTriggerEffect)
+            foreach (var item in affectsToSender)
             {
-                foreach (var item in affectsToSender)
-                {
-                    sender.AddAffect(item);
+                sender.AddAffect(item);
 
-                }
+            }
 
-                if (other.gameObject.GetComponent<MetaData.ObjectMetaData>() != null)
+            if (other.gameObject.GetComponent<MetaData.ObjectMetaData>() != null)
+            {
+                foreach (var item in affectsToHit)
                 {
-                    foreach (var item in affectsToHit)
-                    {
-                        other.gameObject.GetComponent<MetaData.ObjectMetaData>().AddAffect(item);
-                    }
+                    other.gameObject.GetComponent<MetaData.ObjectMetaData>().AddAffect(item);
                 }
             }
         }

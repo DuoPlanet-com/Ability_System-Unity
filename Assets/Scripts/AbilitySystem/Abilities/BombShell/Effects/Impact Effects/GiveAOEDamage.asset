@@ -8,12 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 350d20982b432d149843104787615947, type: 3}
-  m_Name: Kaboom
+  m_Script: {fileID: 11500000, guid: 633f232377ce1cd40b8b04920435ace7, type: 3}
+  m_Name: GiveAOEDamage
   m_EditorClassIdentifier: 
   collisionChecks: []
   isTriggerEffect: 0
-  toSpawn:
-  - {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
-  offset: {x: 0, y: 0, z: 0}
-  orientation: 1
+  affectsToSender: []
+  affectsToHit:
+  - {fileID: 11400000, guid: 5d8d68343f0d45f489ae2ff4924eed27, type: 2}

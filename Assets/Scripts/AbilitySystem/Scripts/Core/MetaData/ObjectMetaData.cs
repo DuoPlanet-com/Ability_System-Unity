@@ -51,7 +51,7 @@ namespace AbilitySystem.MetaData {
 
         protected virtual void Start()
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            // GameObject player = GameObject.FindGameObjectWithTag("Player");
 
             originalMaxHealth = maxHealth;
             originalMaxResource = maxResource;

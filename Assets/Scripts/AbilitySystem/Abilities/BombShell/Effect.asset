@@ -14,7 +14,7 @@ MonoBehaviour:
   effectName: 
   effectDescription: 
   maxStacks: 1
-  stackTimer: 1
+  stackTimer: 3
   stackCommitment: 2
   effectScripts:
   - {fileID: 11400000, guid: ffdf673d27a42f04b83925d20ddb8db6, type: 2}

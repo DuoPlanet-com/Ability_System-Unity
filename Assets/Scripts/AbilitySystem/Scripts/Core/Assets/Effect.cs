@@ -57,7 +57,7 @@ namespace AbilitySystem {
         bool oneTaken = false;
 
 
-        MetaData.ObjectMetaData sender;
+        MetaData.PlayerMetaData sender;
 
 
         public enum StackCommitment
@@ -256,6 +256,12 @@ namespace AbilitySystem {
                 return 0;
             }
             return cooldown;
+        }
+
+
+        protected MetaData.PlayerMetaData Sender()
+        {
+            return sender;
         }
 
     }
