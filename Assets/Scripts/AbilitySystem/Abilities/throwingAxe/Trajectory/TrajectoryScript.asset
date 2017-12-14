@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Name: TrajectoryScript
   m_EditorClassIdentifier: 
   effectScriptName: 
-  trajectoryType: 1
   origin: 0
   originOffset: {x: 0, y: 0, z: 2}
   offsetSpace: 1
   direction: {x: 0, y: 0, z: 1}
   directionSpace: 1
-  force: 2000
+  force: 900
   projectile: {fileID: 11400000, guid: a6c06c8d7e4e8834ca1f09b58c470290, type: 2}
   projectileEffects:
   - {fileID: 11400000, guid: 433f37de7f93bb04da718b1ca200c7c5, type: 2}
   - {fileID: 11400000, guid: 799f6c698f256654a9990613311463b9, type: 2}
+  - {fileID: 11400000, guid: 1139f94037f1b1d45b5133631b33dc3a, type: 2}
   impactEffects:
   - {fileID: 11400000, guid: 976d6b35da41542409b8050fd8e17f54, type: 2}
   - {fileID: 11400000, guid: c9303a73a0e549f4ba141b749e4cc39f, type: 2}

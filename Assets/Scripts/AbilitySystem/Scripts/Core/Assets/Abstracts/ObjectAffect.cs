@@ -21,7 +21,7 @@ namespace AbilitySystem {
 
 
         [Tooltip("If a character already has this affliction, should the time left be reset?")]
-        public bool reapplicible;
+        public bool reappliable = true;
 
         [Tooltip("Should this be played only once?")]
         public bool oneTime = true;
